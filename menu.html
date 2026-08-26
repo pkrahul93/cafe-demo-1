@@ -378,7 +378,7 @@
         ===================================================== */
 
         .category-bar {
-            position: sticky;
+            position: static;
 
             top: 76px;
 
@@ -877,12 +877,12 @@
         .cart-drawer {
             position: fixed;
 
-            top: 0;
+            top: 80px;
             right: 0;
 
             width: min(430px, 100%);
 
-            height: 100vh;
+            height: 88vh;
 
             background: var(--white);
 
@@ -907,7 +907,7 @@
 
 
         .cart-header {
-            padding: 25px;
+            padding: 15px;
 
             border-bottom: 1px solid var(--border);
 
@@ -922,7 +922,7 @@
         .cart-header h2 {
             font-family: "Playfair Display", serif;
 
-            font-size: 27px;
+            font-size: 22px;
         }
 
 
@@ -3336,7 +3336,6 @@
 
 
             calculateBill();
-        updateCart();
 
         }
 
@@ -3462,8 +3461,7 @@
                 .remove("open");
 
 
-            document.body.style.overflow =
-                "";
+            document.body.style.overflow = "";
 
         }
 
@@ -3488,9 +3486,9 @@
             /*
                 Later:
             */
-                window.location.href =
-                    "checkout.html";
-            
+            window.location.href =
+                "checkout.html";
+
 
             // alert(
             //     "Checkout page will be connected here."
@@ -3795,8 +3793,8 @@
     </script>
 
 
-<script src="data/menu.js"></script>
-<script src="assets/common.js"></script>
+    <script src="data/menu.js"></script>
+    <script src="assets/common.js"></script>
 </body>
 
 </html>
