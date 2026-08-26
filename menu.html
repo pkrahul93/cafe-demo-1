@@ -1,0 +1,3802 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Menu | Suto Cafe Preet Vihar</title>
+
+    <meta name="description"
+        content="Explore the Suto Cafe Preet Vihar menu — coffee, pizza, pasta, burgers, momos, snacks, desserts, beverages and more.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: #faf8f4;
+            color: #1b1612;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button,
+        input {
+            font-family: inherit;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+
+        /* =====================================================
+           VARIABLES
+        ===================================================== */
+
+        :root {
+            --dark: #17120f;
+            --dark-2: #241b16;
+            --cream: #faf8f4;
+            --cream-2: #f0e9df;
+            --white: #ffffff;
+            --brown: #704b32;
+            --brown-light: #9a6c4c;
+            --gold: #c99b63;
+            --green: #28744a;
+            --muted: #766d65;
+            --border: rgba(30, 23, 18, 0.10);
+
+            --shadow:
+                0 20px 60px rgba(31, 23, 18, 0.08);
+        }
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        .header {
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 76px;
+
+            background: rgba(250, 248, 244, 0.94);
+
+            backdrop-filter: blur(18px);
+
+            border-bottom: 1px solid var(--border);
+
+            z-index: 1000;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 5%;
+        }
+
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+
+        .logo-icon {
+            width: 38px;
+            height: 38px;
+
+            border-radius: 50%;
+
+            background: var(--dark);
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+
+        .logo-name {
+            font-family: "Playfair Display", serif;
+
+            font-size: 25px;
+
+            font-weight: 700;
+        }
+
+
+        .navigation {
+            display: flex;
+            gap: 30px;
+        }
+
+
+        .navigation a {
+            font-size: 13px;
+            font-weight: 700;
+
+            color: #4b433d;
+
+            transition: .2s;
+        }
+
+
+        .navigation a:hover {
+            color: var(--brown);
+        }
+
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+
+        .call-btn {
+            width: 42px;
+            height: 42px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 16px;
+
+            transition: .2s;
+        }
+
+
+        .call-btn:hover {
+            background: var(--dark);
+            color: white;
+        }
+
+
+        .cart-header-btn {
+            border: none;
+
+            background: var(--dark);
+            color: white;
+
+            border-radius: 999px;
+
+            padding: 12px 18px;
+
+            font-size: 13px;
+            font-weight: 800;
+
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+
+        .cart-count {
+            width: 20px;
+            height: 20px;
+
+            background: var(--gold);
+
+            color: var(--dark);
+
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 10px;
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .menu-hero {
+            padding: 135px 5% 65px;
+
+            background:
+                radial-gradient(circle at 85% 20%,
+                    rgba(201, 155, 99, .18),
+                    transparent 35%),
+                var(--cream);
+
+            text-align: center;
+        }
+
+
+        .hero-label {
+            display: inline-flex;
+
+            align-items: center;
+            gap: 8px;
+
+            padding: 8px 14px;
+
+            border-radius: 999px;
+
+            background: #eee5da;
+
+            color: var(--brown);
+
+            font-size: 11px;
+            font-weight: 800;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.5px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .hero-label span {
+            width: 7px;
+            height: 7px;
+
+            background: #3d9b62;
+
+            border-radius: 50%;
+        }
+
+
+        .menu-hero h1 {
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(48px, 7vw, 82px);
+
+            line-height: .98;
+
+            letter-spacing: -3px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .menu-hero h1 em {
+            color: var(--brown-light);
+        }
+
+
+        .menu-hero p {
+            max-width: 580px;
+
+            margin: auto;
+
+            color: var(--muted);
+
+            line-height: 1.7;
+
+            font-size: 15px;
+        }
+
+
+        /* =====================================================
+           SEARCH
+        ===================================================== */
+
+        .search-wrapper {
+            max-width: 650px;
+
+            margin: 32px auto 0;
+
+            position: relative;
+        }
+
+
+        .search-wrapper input {
+            width: 100%;
+
+            height: 58px;
+
+            border-radius: 999px;
+
+            border: 1px solid var(--border);
+
+            background: white;
+
+            padding: 0 55px 0 22px;
+
+            outline: none;
+
+            font-size: 14px;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, .04);
+
+            transition: .2s;
+        }
+
+
+        .search-wrapper input:focus {
+            border-color: var(--brown-light);
+
+            box-shadow:
+                0 10px 30px rgba(112, 75, 50, .10);
+        }
+
+
+        .search-icon {
+            position: absolute;
+
+            right: 20px;
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            font-size: 19px;
+
+            color: var(--muted);
+        }
+
+
+        /* =====================================================
+           CATEGORY NAV
+        ===================================================== */
+
+        .category-bar {
+            position: sticky;
+
+            top: 76px;
+
+            z-index: 900;
+
+            background: rgba(255, 255, 255, .95);
+
+            backdrop-filter: blur(15px);
+
+            border-bottom: 1px solid var(--border);
+
+            overflow-x: auto;
+
+            scrollbar-width: none;
+        }
+
+
+        .category-bar::-webkit-scrollbar {
+            display: none;
+        }
+
+
+        .category-list {
+            min-width: max-content;
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 7px;
+
+            padding: 13px 5%;
+        }
+
+
+        .category-btn {
+            border: none;
+
+            background: transparent;
+
+            color: var(--muted);
+
+            padding: 10px 15px;
+
+            border-radius: 999px;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            white-space: nowrap;
+
+            transition: .2s;
+        }
+
+
+        .category-btn:hover {
+            background: var(--cream-2);
+
+            color: var(--dark);
+        }
+
+
+        .category-btn.active {
+            background: var(--dark);
+
+            color: white;
+        }
+
+
+        /* =====================================================
+           MAIN MENU
+        ===================================================== */
+
+        .menu-container {
+            max-width: 1450px;
+
+            margin: auto;
+
+            padding: 65px 5% 120px;
+        }
+
+
+        /* =====================================================
+           CATEGORY SECTION
+        ===================================================== */
+
+        .menu-section {
+            margin-bottom: 85px;
+
+            scroll-margin-top: 155px;
+        }
+
+
+        .section-header {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: end;
+
+            margin-bottom: 25px;
+        }
+
+
+        .section-title-wrap {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+
+        .section-icon {
+            width: 48px;
+            height: 48px;
+
+            background: var(--cream-2);
+
+            border-radius: 15px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 22px;
+        }
+
+
+        .section-header h2 {
+            font-family: "Playfair Display", serif;
+
+            font-size: 34px;
+
+            letter-spacing: -.8px;
+        }
+
+
+        .section-header p {
+            color: var(--muted);
+
+            font-size: 12px;
+
+            margin-top: 3px;
+        }
+
+
+        .section-count {
+            font-size: 11px;
+
+            color: var(--muted);
+
+            background: var(--cream-2);
+
+            padding: 7px 11px;
+
+            border-radius: 999px;
+        }
+
+
+        /* =====================================================
+           FOOD GRID
+        ===================================================== */
+
+        .food-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 18px;
+        }
+
+
+        /* =====================================================
+           FOOD CARD
+        ===================================================== */
+
+        .food-card {
+            background: white;
+
+            border: 1px solid var(--border);
+
+            border-radius: 23px;
+
+            padding: 13px;
+
+            display: flex;
+
+            gap: 17px;
+
+            min-height: 185px;
+
+            transition: .3s ease;
+
+            position: relative;
+        }
+
+
+        .food-card:hover {
+            transform: translateY(-4px);
+
+            box-shadow: var(--shadow);
+        }
+
+
+        .food-card-image {
+            width: 145px;
+
+            min-width: 145px;
+
+            height: 155px;
+
+            border-radius: 17px;
+
+            overflow: hidden;
+
+            position: relative;
+        }
+
+
+        .food-card-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: .5s;
+        }
+
+
+        .food-card:hover .food-card-image img {
+            transform: scale(1.07);
+        }
+
+
+        .bestseller {
+            position: absolute;
+
+            top: 8px;
+            left: 8px;
+
+            padding: 5px 8px;
+
+            background: white;
+
+            border-radius: 999px;
+
+            font-size: 8px;
+
+            font-weight: 800;
+
+            color: var(--brown);
+        }
+
+
+        .veg-mark {
+            position: absolute;
+
+            bottom: 8px;
+            left: 8px;
+
+            width: 18px;
+            height: 18px;
+
+            background: white;
+
+            border-radius: 5px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .veg-mark::after {
+            content: "";
+
+            width: 7px;
+            height: 7px;
+
+            border-radius: 50%;
+
+            background: var(--green);
+        }
+
+
+        .food-content {
+            flex: 1;
+
+            display: flex;
+
+            flex-direction: column;
+
+            min-width: 0;
+        }
+
+
+        .food-content h3 {
+            font-family: "Playfair Display", serif;
+
+            font-size: 20px;
+
+            line-height: 1.15;
+
+            margin-bottom: 7px;
+        }
+
+
+        .food-description {
+            font-size: 11px;
+
+            line-height: 1.55;
+
+            color: var(--muted);
+
+            display: -webkit-box;
+
+            -webkit-line-clamp: 3;
+
+            -webkit-box-orient: vertical;
+
+            overflow: hidden;
+        }
+
+
+        .food-bottom {
+            margin-top: auto;
+
+            padding-top: 12px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+        }
+
+
+        .food-price {
+            font-size: 16px;
+
+            font-weight: 800;
+        }
+
+
+        .food-price small {
+            font-size: 9px;
+
+            color: var(--muted);
+
+            font-weight: 500;
+        }
+
+
+        .add-button {
+            border: none;
+
+            background: var(--dark);
+
+            color: white;
+
+            border-radius: 999px;
+
+            padding: 9px 14px;
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            transition: .2s;
+        }
+
+
+        .add-button:hover {
+            background: var(--brown);
+
+            transform: translateY(-1px);
+        }
+
+
+        /* =====================================================
+           QUANTITY CONTROL
+        ===================================================== */
+
+        .quantity-control {
+            display: none;
+
+            align-items: center;
+
+            gap: 8px;
+
+            background: var(--dark);
+
+            color: white;
+
+            border-radius: 999px;
+
+            padding: 5px;
+        }
+
+
+        .quantity-control button {
+            width: 25px;
+            height: 25px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background: rgba(255, 255, 255, .15);
+
+            color: white;
+
+            font-size: 14px;
+        }
+
+
+        .quantity-control span {
+            min-width: 15px;
+
+            text-align: center;
+
+            font-size: 11px;
+
+            font-weight: 800;
+        }
+
+
+        /* =====================================================
+           NO RESULTS
+        ===================================================== */
+
+        .no-results {
+            display: none;
+
+            text-align: center;
+
+            padding: 90px 20px;
+
+            color: var(--muted);
+        }
+
+
+        .no-results div {
+            font-size: 45px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .no-results h3 {
+            font-family: "Playfair Display", serif;
+
+            font-size: 28px;
+
+            color: var(--dark);
+
+            margin-bottom: 8px;
+        }
+
+
+        /* =====================================================
+           CART OVERLAY
+        ===================================================== */
+
+        .cart-overlay {
+            position: fixed;
+
+            inset: 0;
+
+            background: rgba(0, 0, 0, .45);
+
+            backdrop-filter: blur(4px);
+
+            z-index: 1500;
+
+            opacity: 0;
+
+            visibility: hidden;
+
+            transition: .3s;
+        }
+
+
+        .cart-overlay.open {
+            opacity: 1;
+
+            visibility: visible;
+        }
+
+
+        /* =====================================================
+           CART DRAWER
+        ===================================================== */
+
+        .cart-drawer {
+            position: fixed;
+
+            top: 0;
+            right: 0;
+
+            width: min(430px, 100%);
+
+            height: 100vh;
+
+            background: var(--white);
+
+            z-index: 1600;
+
+            transform: translateX(100%);
+
+            transition: .35s ease;
+
+            display: flex;
+
+            flex-direction: column;
+
+            box-shadow:
+                -20px 0 60px rgba(0, 0, 0, .15);
+        }
+
+
+        .cart-drawer.open {
+            transform: translateX(0);
+        }
+
+
+        .cart-header {
+            padding: 25px;
+
+            border-bottom: 1px solid var(--border);
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+        }
+
+
+        .cart-header h2 {
+            font-family: "Playfair Display", serif;
+
+            font-size: 27px;
+        }
+
+
+        .close-cart {
+            width: 36px;
+            height: 36px;
+
+            border: 1px solid var(--border);
+
+            background: transparent;
+
+            border-radius: 50%;
+
+            font-size: 18px;
+        }
+
+
+        .cart-items {
+            flex: 1;
+
+            overflow-y: auto;
+
+            padding: 20px;
+        }
+
+
+        .empty-cart {
+            height: 100%;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            color: var(--muted);
+        }
+
+
+        .empty-cart-icon {
+            font-size: 48px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .empty-cart h3 {
+            color: var(--dark);
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 25px;
+
+            margin-bottom: 7px;
+        }
+
+
+        .cart-item {
+            display: flex;
+
+            gap: 12px;
+
+            padding: 15px 0;
+
+            border-bottom: 1px solid var(--border);
+        }
+
+
+        .cart-item-image {
+            width: 62px;
+            height: 62px;
+
+            border-radius: 12px;
+
+            overflow: hidden;
+
+            flex-shrink: 0;
+        }
+
+
+        .cart-item-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+
+        .cart-item-info {
+            flex: 1;
+        }
+
+
+        .cart-item-info h4 {
+            font-size: 13px;
+
+            margin-bottom: 5px;
+        }
+
+
+        .cart-item-price {
+            font-size: 12px;
+
+            font-weight: 800;
+        }
+
+
+        .cart-quantity {
+            display: flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+            margin-top: 8px;
+        }
+
+
+        .cart-quantity button {
+            width: 24px;
+            height: 24px;
+
+            border: 1px solid var(--border);
+
+            background: white;
+
+            border-radius: 50%;
+        }
+
+
+        .cart-quantity span {
+            font-size: 11px;
+
+            font-weight: 700;
+        }
+
+
+        .cart-footer {
+            border-top: 1px solid var(--border);
+
+            padding: 20px;
+        }
+
+
+        .bill-row {
+            display: flex;
+
+            justify-content: space-between;
+
+            margin-bottom: 10px;
+
+            font-size: 13px;
+
+            color: var(--muted);
+        }
+
+
+        .bill-row.total {
+            color: var(--dark);
+
+            font-size: 18px;
+
+            font-weight: 800;
+
+            padding-top: 12px;
+
+            margin-top: 10px;
+
+            border-top: 1px dashed var(--border);
+        }
+
+
+        .checkout-btn {
+            width: 100%;
+
+            border: none;
+
+            background: var(--dark);
+
+            color: white;
+
+            padding: 16px;
+
+            border-radius: 14px;
+
+            margin-top: 17px;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            transition: .2s;
+        }
+
+
+        .checkout-btn:hover {
+            background: var(--brown);
+        }
+
+
+        /* =====================================================
+           TOAST
+        ===================================================== */
+
+        .toast {
+            position: fixed;
+
+            bottom: 25px;
+            left: 50%;
+
+            transform:
+                translate(-50%, 100px);
+
+            background: var(--dark);
+
+            color: white;
+
+            padding: 13px 20px;
+
+            border-radius: 999px;
+
+            z-index: 3000;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            opacity: 0;
+
+            transition: .3s;
+        }
+
+
+        .toast.show {
+            transform:
+                translate(-50%, 0);
+
+            opacity: 1;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            background: #111;
+
+            color: white;
+
+            padding: 60px 5% 25px;
+        }
+
+
+        .footer-content {
+            max-width: 1400px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                1.5fr 1fr 1fr 1fr;
+
+            gap: 50px;
+
+            padding-bottom: 45px;
+        }
+
+
+        .footer-logo {
+            font-family: "Playfair Display", serif;
+
+            font-size: 29px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .footer-description {
+            max-width: 300px;
+
+            color: #999;
+
+            font-size: 12px;
+
+            line-height: 1.7;
+        }
+
+
+        footer h4 {
+            font-size: 12px;
+
+            margin-bottom: 16px;
+        }
+
+
+        footer ul {
+            list-style: none;
+        }
+
+
+        footer li {
+            color: #888;
+
+            font-size: 12px;
+
+            margin-bottom: 10px;
+        }
+
+
+        footer a:hover {
+            color: white;
+        }
+
+
+        .footer-bottom {
+            max-width: 1400px;
+
+            margin: auto;
+
+            padding-top: 20px;
+
+            border-top: 1px solid rgba(255, 255, 255, .1);
+
+            color: #666;
+
+            font-size: 10px;
+
+            display: flex;
+
+            justify-content: space-between;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media(max-width:1100px) {
+
+            .food-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .navigation {
+                gap: 17px;
+            }
+
+            .footer-content {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+        }
+
+
+        @media(max-width:760px) {
+
+            .header {
+                height: 70px;
+            }
+
+            .navigation {
+                display: none;
+            }
+
+            .category-bar {
+                top: 70px;
+            }
+
+            .category-list {
+                justify-content: flex-start;
+            }
+
+            .menu-hero {
+                padding-top: 115px;
+            }
+
+            .food-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .food-card {
+                min-height: 160px;
+            }
+
+            .food-card-image {
+                width: 120px;
+                min-width: 120px;
+                height: 140px;
+            }
+
+            .section-header {
+                align-items: flex-start;
+            }
+
+            .section-count {
+                display: none;
+            }
+        }
+
+
+        @media(max-width:480px) {
+
+            .logo-name {
+                font-size: 22px;
+            }
+
+            .call-btn {
+                display: none;
+            }
+
+            .cart-header-btn {
+                padding: 10px 13px;
+            }
+
+            .menu-hero {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+
+            .menu-hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .menu-container {
+                padding-left: 4%;
+                padding-right: 4%;
+            }
+
+            .food-card {
+                padding: 10px;
+                gap: 12px;
+            }
+
+            .food-card-image {
+                width: 105px;
+                min-width: 105px;
+                height: 135px;
+            }
+
+            .food-content h3 {
+                font-size: 18px;
+            }
+
+            .food-description {
+                font-size: 10px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="assets/common.css">
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+     HEADER
+===================================================== -->
+
+    <div id="siteHeader"></div>
+
+
+
+    <!-- =====================================================
+     MENU HERO
+===================================================== -->
+
+    <section class="menu-hero">
+
+        <div class="hero-label">
+
+            <span></span>
+
+            Suto Cafe · Preet Vihar
+
+        </div>
+
+
+        <h1>
+
+            Good food,
+            <br>
+
+            <em>great choices.</em>
+
+        </h1>
+
+
+        <p>
+
+            Explore our menu of comforting food, handcrafted
+            beverages, café favourites and sweet treats.
+
+        </p>
+
+
+        <div class="search-wrapper">
+
+            <input type="text" id="searchInput" placeholder="Search pizza, coffee, burger, pasta..." autocomplete="off">
+
+            <span class="search-icon">
+                ⌕
+            </span>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+     CATEGORY BAR
+===================================================== -->
+
+    <div class="category-bar">
+
+        <div class="category-list">
+
+            <button class="category-btn active" data-target="all">
+                All
+            </button>
+
+            <button class="category-btn" data-target="korean">
+                🇰🇷 Korean Specials
+            </button>
+
+            <button class="category-btn" data-target="starters">
+                🥗 Starters
+            </button>
+
+            <button class="category-btn" data-target="pizza">
+                🍕 Pizza & Pasta
+            </button>
+
+            <button class="category-btn" data-target="burgers">
+                🍔 Burgers & Sandwiches
+            </button>
+
+            <button class="category-btn" data-target="snacks">
+                🍟 Snacks
+            </button>
+
+            <button class="category-btn" data-target="momos">
+                🥟 Momos
+            </button>
+
+            <button class="category-btn" data-target="rolls">
+                🌯 Rolls
+            </button>
+
+            <button class="category-btn" data-target="maggi">
+                🍜 Maggi
+            </button>
+
+            <button class="category-btn" data-target="desserts">
+                🍰 Desserts
+            </button>
+
+            <button class="category-btn" data-target="beverages">
+                ☕ Beverages
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+     MENU CONTAINER
+===================================================== -->
+
+    <main class="menu-container">
+
+
+        <!-- =================================================
+         KOREAN SPECIALS
+    ================================================== -->
+
+        <section class="menu-section" id="korean" data-category="korean">
+
+            <div class="section-header">
+
+                <div class="section-title-wrap">
+
+                    <div class="section-icon">
+                        🇰🇷
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Korean Specials
+                        </h2>
+
+                        <p>
+                            Bold flavours, modern café style.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <span class="section-count">
+                    4 items
+                </span>
+
+            </div>
+
+
+            <div class="food-grid">
+
+
+                <article class="food-card" data-name="Korean Tteokbokki" data-category="korean" data-price="249"
+                    data-image="https://images.unsplash.com/photo-1590301157890-4810ed352733?auto=format&fit=crop&w=700&q=80">
+
+                    <div class="food-card-image">
+
+                        <span class="bestseller">
+                            MUST TRY
+                        </span>
+
+                        <span class="veg-mark"></span>
+
+                        <img src="https://images.unsplash.com/photo-1590301157890-4810ed352733?auto=format&fit=crop&w=700&q=80"
+                            alt="Korean special">
+
+                    </div>
+
+
+                    <div class="food-content">
+
+                        <h3>
+                            Korean Tteokbokki
+                        </h3>
+
+                        <p class="food-description">
+                            Soft rice cakes tossed in a rich,
+                            spicy Korean-inspired sauce.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <span class="food-price">
+                                ₹249
+                            </span>
+
+                            <button class="add-button" onclick="addItem(this)">
+                                Add +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="food-card" data-name="Korean Noodles" data-category="korean" data-price="229"
+                    data-image="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=700&q=80">
+
+                    <div class="food-card-image">
+
+                        <span class="veg-mark"></span>
+
+                        <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=700&q=80"
+                            alt="Korean noodles">
+
+                    </div>
+
+
+                    <div class="food-content">
+
+                        <h3>
+                            Korean Style Noodles
+                        </h3>
+
+                        <p class="food-description">
+                            Spicy, savoury noodles with a
+                            delicious Korean-inspired twist.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <span class="food-price">
+                                ₹229
+                            </span>
+
+                            <button class="add-button" onclick="addItem(this)">
+                                Add +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="food-card" data-name="Korean Fried Rice" data-category="korean" data-price="219"
+                    data-image="https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=700&q=80">
+
+                    <div class="food-card-image">
+
+                        <span class="veg-mark"></span>
+
+                        <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=700&q=80"
+                            alt="Fried rice">
+
+                    </div>
+
+
+                    <div class="food-content">
+
+                        <h3>
+                            Korean Fried Rice
+                        </h3>
+
+                        <p class="food-description">
+                            Fragrant rice tossed with vegetables
+                            and bold Asian flavours.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <span class="food-price">
+                                ₹219
+                            </span>
+
+                            <button class="add-button" onclick="addItem(this)">
+                                Add +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+         STARTERS
+    ================================================== -->
+
+        <section class="menu-section" id="starters" data-category="starters">
+
+            <div class="section-header">
+
+                <div class="section-title-wrap">
+
+                    <div class="section-icon">
+                        🥗
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Starters
+                        </h2>
+
+                        <p>
+                            Perfect for sharing.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <span class="section-count">
+                    3 items
+                </span>
+
+            </div>
+
+
+            <div class="food-grid">
+
+
+                <article class="food-card" data-name="Crispy Chilli Potato" data-category="starters" data-price="199"
+                    data-image="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=700&q=80">
+
+                    <div class="food-card-image">
+
+                        <span class="bestseller">
+                            POPULAR
+                        </span>
+
+                        <span class="veg-mark"></span>
+
+                        <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=700&q=80"
+                            alt="Chilli potato">
+
+                    </div>
+
+
+                    <div class="food-content">
+
+                        <h3>
+                            Crispy Chilli Potato
+                        </h3>
+
+                        <p class="food-description">
+                            Crispy potato tossed in a spicy,
+                            tangy chilli sauce.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <span class="food-price">
+                                ₹199
+                            </span>
+
+                            <button class="add-button" onclick="addItem(this)">
+                                Add +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="food-card" data-name="Paneer Tikka" data-category="starters" data-price="249"
+                    data-image="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=700&q=80">
+
+                    <div class="food-card-image">
+
+                        <span class="veg-mark"></span>
+
+                        <img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=700&q=80"
+                            alt="Paneer tikka">
+
+                    </div>
+
+
+                    <div class="food-content">
+
+                        <h3>
+                            Paneer Tikka
+                        </h3>
+
+                        <p class="food-description">
+                            Soft paneer marinated with aromatic
+                            spices and grilled to perfection.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <span class="food-price">
+                                ₹249
+                            </span>
+
+                            <button class="add-button" onclick="addItem(this)">
+                                Add +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="food-card" data-name="Crispy Corn" data-category="starters" data-price="189"
+                    data-image="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=700&q=80">
+
+                    <div class="food-card-image">
+
+                        <span class="veg-mark"></span>
+
+                        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=700&q=80"
+                            alt="Crispy corn">
+
+                    </div>
+
+
+                    <div class="food-content">
+
+                        <h3>
+                            Crispy Corn
+                        </h3>
+
+                        <p class="food-description">
+                            Golden crispy corn seasoned with
+                            herbs and café-style spices.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <span class="food-price">
+                                ₹189
+                            </span>
+
+                            <button class="add-button" onclick="addItem(this)">
+                                Add +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+         PIZZA & PASTA
+    ================================================== -->
+
+        <section class="menu-section" id="pizza" data-category="pizza">
+
+            <div class="section-header">
+
+                <div class="section-title-wrap">
+
+                    <div class="section-icon">
+                        🍕
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Pizza & Pasta
+                        </h2>
+
+                        <p>
+                            Cheesy, saucy and comforting.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <span class="section-count">
+                    4 items
+                </span>
+
+            </div>
+
+
+            <div class="food-grid">
+
+
+                <article class="food-card" data-name="Margherita Pizza" data-category="pizza" data-price="229"
+                    data-image="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=700&q=80">
+
+                    <div class="food-card-image">
+
+                        <span class="bestseller">
+                            BESTSELLER
+                        </span>
+
+                        <span class="veg-mark"></span>
+
+                        <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=700&q=80"
+                            alt="Margherita pizza">
+
+                    </div>
+
+
+                    <div class="food-content">
+
+                        <h3>
+                            Margherita Pizza
+                        </h3>
+
+                        <p class="food-description">
+                            Classic cheesy pizza with tomato,
+                            mozzarella and herbs.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <span class="food-price">
+                                ₹229
+                            </span>
+
+                            <button class="add-button" onclick="addItem(this)">
+                                Add +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="food-card" data-name="Farmhouse Pizza" data-category="pizza" data-price="279"
+                    data-image="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=700&q=80">
+
+                    <div class="food-card-image">
+
+                        <span class="veg-mark"></span>
+
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=700&q=80"
+                            alt="Farmhouse pizza">
+
+                    </div>
+
+
+                    <div class="food-content">
+
+                        <h3>
+                            Farmhouse Pizza
+                        </h3>
+
+                        <p class="food-description">
+                            Loaded with fresh vegetables,
+                            cheese and delicious seasoning.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <span class="food-price">
+                                ₹279
+                            </span>
+
+                            <button class="add-button" onclick="addItem(this)">
+                                Add +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="food-card" data-name="White Sauce Pasta" data-category="pizza" data-price="249"
+                    data-image="https://images.unsplash.com/photo-1645112411341-6c4fd023714a?auto=format&fit=crop&w=700&q=80">
+
+                    <div class="food-card-image">
+
+                        <span class="bestseller">
+                            POPULAR
+                        </span>
+
+                        <span class="veg-mark"></span>
+
+                        <img src="https://images.unsplash.com/photo-1645112411341-6c4fd023714a?auto=format&fit=crop&w=700&q=80"
+                            alt="White sauce pasta">
+
+                    </div>
+
+
+                    <div class="food-content">
+
+                        <h3>
+                            White Sauce Pasta
+                        </h3>
+
+                        <p class="food-description">
+                            Creamy pasta tossed in rich white
+                            sauce with herbs and vegetables.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <span class="food-price">
+                                ₹249
+                            </span>
+
+                            <button class="add-button" onclick="addItem(this)">
+                                Add +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="food-card" data-name="Arrabbiata Pasta" data-category="pizza" data-price="239"
+                    data-image="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=700&q=80">
+
+                    <div class="food-card-image">
+
+                        <span class="veg-mark"></span>
+
+                        <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=700&q=80"
+                            alt="Arrabbiata pasta">
+
+                    </div>
+
+
+                    <div class="food-content">
+
+                        <h3>
+                            Arrabbiata Pasta
+                        </h3>
+
+                        <p class="food-description">
+                            Pasta in a rich tomato sauce with
+                            herbs and a gentle spicy kick.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <span class="food-price">
+                                ₹239
+                            </span>
+
+                            <button class="add-button" onclick="addItem(this)">
+                                Add +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+         BURGERS
+    ================================================== -->
+
+        <section class="menu-section" id="burgers" data-category="burgers">
+
+            <div class="section-header">
+
+                <div class="section-title-wrap">
+
+                    <div class="section-icon">
+                        🍔
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Burgers & Sandwiches
+                        </h2>
+
+                        <p>
+                            Big bites. Serious comfort.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <span class="section-count">
+                    3 items
+                </span>
+
+            </div>
+
+
+            <div class="food-grid">
+
+
+                <article class="food-card" data-name="Classic Veg Burger" data-category="burgers" data-price="179"
+                    data-image="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=80">
+
+                    <div class="food-card-image">
+
+                        <span class="bestseller">
+                            BESTSELLER
+                        </span>
+
+                        <span class="veg-mark"></span>
+
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=80"
+                            alt="Veg burger">
+
+                    </div>
+
+
+                    <div class="food-content">
+
+                        <h3>
+                            Classic Veg Burger
+                        </h3>
+
+                        <p class="food-description">
+                            Crispy veggie patty with fresh
+                            vegetables and creamy sauce.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <span class="food-price">
+                                ₹179
+                            </span>
+
+                            <button class="add-button" onclick="addItem(this)">
+                                Add +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="food-card" data-name="Cheese Burger" data-category="burgers" data-price="209"
+                    data-image="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?auto=format&fit=crop&w=700&q=80">
+
+                    <div class="food-card-image">
+
+                        <span class="veg-mark"></span>
+
+                        <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?auto=format&fit=crop&w=700&q=80"
+                            alt="Cheese burger">
+
+                    </div>
+
+
+                    <div class="food-content">
+
+                        <h3>
+                            Loaded Cheese Burger
+                        </h3>
+
+                        <p class="food-description">
+                            A delicious veggie burger finished
+                            with melted cheese and sauces.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <span class="food-price">
+                                ₹209
+                            </span>
+
+                            <button class="add-button" onclick="addItem(this)">
+                                Add +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="food-card" data-name="Grilled Sandwich" data-category="burgers" data-price="169"
+                    data-image="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=700&q=80">
+
+                    <div class="food-card-image">
+
+                        <span class="veg-mark"></span>
+
+                        <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=700&q=80"
+                            alt="Grilled sandwich">
+
+                    </div>
+
+
+                    <div class="food-content">
+
+                        <h3>
+                            Grilled Veg Sandwich
+                        </h3>
+
+                        <p class="food-description">
+                            Toasted bread packed with vegetables,
+                            cheese and café-style seasoning.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <span class="food-price">
+                                ₹169
+                            </span>
+
+                            <button class="add-button" onclick="addItem(this)">
+                                Add +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+         SNACKS
+    ================================================== -->
+
+        <section class="menu-section" id="snacks" data-category="snacks">
+
+            <div class="section-header">
+
+                <div class="section-title-wrap">
+
+                    <div class="section-icon">
+                        🍟
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Snacks
+                        </h2>
+
+                        <p>
+                            Quick bites for every mood.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="food-grid">
+
+
+                <article class="food-card" data-name="Peri Peri Fries" data-category="snacks" data-price="149"
+                    data-image="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=700&q=80">
+
+                    <div class="food-card-image">
+
+                        <span class="bestseller">
+                            POPULAR
+                        </span>
+
+                        <span class="veg-mark"></span>
+
+                        <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=700&q=80"
+                            alt="French fries">
+
+                    </div>
+
+
+                    <div class="food-content">
+
+                        <h3>
+                            Peri Peri Fries
+                        </h3>
+
+                        <p class="food-description">
+                            Crispy golden fries coated in
+                            spicy peri peri seasoning.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <span class="food-price">
+                                ₹149
+                            </span>
+
+                            <button class="add-button" onclick="addItem(this)">
+                                Add +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="food-card" data-name="Cheesy Fries" data-category="snacks" data-price="179"
+                    data-image="https://images.unsplash.com/photo-1585109649139-366815a0d713?auto=format&fit=crop&w=700&q=80">
+
+                    <div class="food-card-image">
+
+                        <span class="veg-mark"></span>
+
+                        <img src="https://images.unsplash.com/photo-1585109649139-366815a0d713?auto=format&fit=crop&w=700&q=80"
+                            alt="Cheesy fries">
+
+                    </div>
+
+
+                    <div class="food-content">
+
+                        <h3>
+                            Cheesy Fries
+                        </h3>
+
+                        <p class="food-description">
+                            Golden fries topped with creamy
+                            cheese sauce.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <span class="food-price">
+                                ₹179
+                            </span>
+
+                            <button class="add-button" onclick="addItem(this)">
+                                Add +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="food-card" data-name="Garlic Bread" data-category="snacks" data-price="159"
+                    data-image="https://images.unsplash.com/photo-1573140401552-3fab0b24306f?auto=format&fit=crop&w=700&q=80">
+
+                    <div class="food-card-image">
+
+                        <span class="veg-mark"></span>
+
+                        <img src="https://images.unsplash.com/photo-1573140401552-3fab0b24306f?auto=format&fit=crop&w=700&q=80"
+                            alt="Garlic bread">
+
+                    </div>
+
+
+                    <div class="food-content">
+
+                        <h3>
+                            Garlic Bread
+                        </h3>
+
+                        <p class="food-description">
+                            Warm toasted garlic bread with
+                            herbs and buttery flavour.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <span class="food-price">
+                                ₹159
+                            </span>
+
+                            <button class="add-button" onclick="addItem(this)">
+                                Add +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+         MOMOS
+    ================================================== -->
+
+        <section class="menu-section" id="momos" data-category="momos">
+
+            <div class="section-header">
+
+                <div class="section-title-wrap">
+
+                    <div class="section-icon">
+                        🥟
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Momos
+                        </h2>
+
+                        <p>
+                            Steamed, fried and full of flavour.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="food-grid">
+
+
+                <article class="food-card" data-name="Veg Steamed Momos" data-category="momos" data-price="159"
+                    data-image="https://images.unsplash.com/photo-1625220194771-7ebdea0b70b9?auto=format&fit=crop&w=700&q=80">
+
+                    <div class="food-card-image">
+
+                        <span class="bestseller">
+                            POPULAR
+                        </span>
+
+                        <span class="veg-mark"></span>
+
+                        <img src="https://images.unsplash.com/photo-1625220194771-7ebdea0b70b9?auto=format&fit=crop&w=700&q=80"
+                            alt="Veg momos">
+
+                    </div>
+
+
+                    <div class="food-content">
+
+                        <h3>
+                            Veg Steamed Momos
+                        </h3>
+
+                        <p class="food-description">
+                            Soft steamed dumplings filled with
+                            seasoned vegetables.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <span class="food-price">
+                                ₹159
+                            </span>
+
+                            <button class="add-button" onclick="addItem(this)">
+                                Add +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="food-card" data-name="Fried Momos" data-category="momos" data-price="179"
+                    data-image="https://images.unsplash.com/photo-1625398407796-82650a8c9f6a?auto=format&fit=crop&w=700&q=80">
+
+                    <div class="food-card-image">
+
+                        <span class="veg-mark"></span>
+
+                        <img src="https://images.unsplash.com/photo-1625398407796-82650a8c9f6a?auto=format&fit=crop&w=700&q=80"
+                            alt="Fried momos">
+
+                    </div>
+
+
+                    <div class="food-content">
+
+                        <h3>
+                            Crispy Fried Momos
+                        </h3>
+
+                        <p class="food-description">
+                            Golden fried momos served with
+                            spicy café-style dip.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <span class="food-price">
+                                ₹179
+                            </span>
+
+                            <button class="add-button" onclick="addItem(this)">
+                                Add +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+         ROLLS
+    ================================================== -->
+
+        <section class="menu-section" id="rolls" data-category="rolls">
+
+            <div class="section-header">
+
+                <div class="section-title-wrap">
+
+                    <div class="section-icon">
+                        🌯
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Rolls
+                        </h2>
+
+                        <p>
+                            Easy to eat. Hard to resist.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="food-grid">
+
+
+                <article class="food-card" data-name="Paneer Roll" data-category="rolls" data-price="179"
+                    data-image="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=700&q=80">
+
+                    <div class="food-card-image">
+
+                        <span class="veg-mark"></span>
+
+                        <img src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=700&q=80"
+                            alt="Paneer roll">
+
+                    </div>
+
+
+                    <div class="food-content">
+
+                        <h3>
+                            Paneer Roll
+                        </h3>
+
+                        <p class="food-description">
+                            Soft wrap filled with spiced paneer,
+                            vegetables and creamy sauces.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <span class="food-price">
+                                ₹179
+                            </span>
+
+                            <button class="add-button" onclick="addItem(this)">
+                                Add +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+         MAGGI
+    ================================================== -->
+
+        <section class="menu-section" id="maggi" data-category="maggi">
+
+            <div class="section-header">
+
+                <div class="section-title-wrap">
+
+                    <div class="section-icon">
+                        🍜
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Maggi
+                        </h2>
+
+                        <p>
+                            Comfort food, café style.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="food-grid">
+
+
+                <article class="food-card" data-name="Masala Maggi" data-category="maggi" data-price="119"
+                    data-image="https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?auto=format&fit=crop&w=700&q=80">
+
+                    <div class="food-card-image">
+
+                        <span class="bestseller">
+                            CLASSIC
+                        </span>
+
+                        <span class="veg-mark"></span>
+
+                        <img src="https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?auto=format&fit=crop&w=700&q=80"
+                            alt="Maggi">
+
+                    </div>
+
+
+                    <div class="food-content">
+
+                        <h3>
+                            Masala Maggi
+                        </h3>
+
+                        <p class="food-description">
+                            Hot, comforting noodles with classic
+                            Indian masala flavours.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <span class="food-price">
+                                ₹119
+                            </span>
+
+                            <button class="add-button" onclick="addItem(this)">
+                                Add +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+         DESSERTS
+    ================================================== -->
+
+        <section class="menu-section" id="desserts" data-category="desserts">
+
+            <div class="section-header">
+
+                <div class="section-title-wrap">
+
+                    <div class="section-icon">
+                        🍰
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Desserts
+                        </h2>
+
+                        <p>
+                            Save room for something sweet.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="food-grid">
+
+
+                <article class="food-card" data-name="Chocolate Brownie" data-category="desserts" data-price="149"
+                    data-image="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=700&q=80">
+
+                    <div class="food-card-image">
+
+                        <span class="bestseller">
+                            SWEET PICK
+                        </span>
+
+                        <span class="veg-mark"></span>
+
+                        <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=700&q=80"
+                            alt="Chocolate brownie">
+
+                    </div>
+
+
+                    <div class="food-content">
+
+                        <h3>
+                            Chocolate Brownie
+                        </h3>
+
+                        <p class="food-description">
+                            Rich, fudgy chocolate brownie for
+                            the perfect sweet ending.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <span class="food-price">
+                                ₹149
+                            </span>
+
+                            <button class="add-button" onclick="addItem(this)">
+                                Add +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="food-card" data-name="Chocolate Cake" data-category="desserts" data-price="179"
+                    data-image="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=700&q=80">
+
+                    <div class="food-card-image">
+
+                        <span class="veg-mark"></span>
+
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=700&q=80"
+                            alt="Chocolate cake">
+
+                    </div>
+
+
+                    <div class="food-content">
+
+                        <h3>
+                            Chocolate Cake
+                        </h3>
+
+                        <p class="food-description">
+                            Soft chocolate cake layered with
+                            rich chocolate cream.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <span class="food-price">
+                                ₹179
+                            </span>
+
+                            <button class="add-button" onclick="addItem(this)">
+                                Add +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+         BEVERAGES
+    ================================================== -->
+
+        <section class="menu-section" id="beverages" data-category="beverages">
+
+            <div class="section-header">
+
+                <div class="section-title-wrap">
+
+                    <div class="section-icon">
+                        ☕
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Beverages
+                        </h2>
+
+                        <p>
+                            Coffee, shakes and refreshing sips.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="food-grid">
+
+
+                <article class="food-card" data-name="Cappuccino" data-category="beverages" data-price="129"
+                    data-image="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=700&q=80">
+
+                    <div class="food-card-image">
+
+                        <span class="bestseller">
+                            FAVOURITE
+                        </span>
+
+                        <span class="veg-mark"></span>
+
+                        <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=700&q=80"
+                            alt="Cappuccino">
+
+                    </div>
+
+
+                    <div class="food-content">
+
+                        <h3>
+                            Cappuccino
+                        </h3>
+
+                        <p class="food-description">
+                            Smooth espresso with steamed milk
+                            and velvety foam.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <span class="food-price">
+                                ₹129
+                            </span>
+
+                            <button class="add-button" onclick="addItem(this)">
+                                Add +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="food-card" data-name="Cold Coffee" data-category="beverages" data-price="159"
+                    data-image="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=80">
+
+                    <div class="food-card-image">
+
+                        <span class="bestseller">
+                            POPULAR
+                        </span>
+
+                        <span class="veg-mark"></span>
+
+                        <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=80"
+                            alt="Cold coffee">
+
+                    </div>
+
+
+                    <div class="food-content">
+
+                        <h3>
+                            Classic Cold Coffee
+                        </h3>
+
+                        <p class="food-description">
+                            Chilled creamy coffee blended to
+                            café-style perfection.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <span class="food-price">
+                                ₹159
+                            </span>
+
+                            <button class="add-button" onclick="addItem(this)">
+                                Add +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="food-card" data-name="Chocolate Shake" data-category="beverages" data-price="189"
+                    data-image="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=700&q=80">
+
+                    <div class="food-card-image">
+
+                        <span class="veg-mark"></span>
+
+                        <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=700&q=80"
+                            alt="Chocolate shake">
+
+                    </div>
+
+
+                    <div class="food-content">
+
+                        <h3>
+                            Chocolate Shake
+                        </h3>
+
+                        <p class="food-description">
+                            Rich, creamy chocolate shake for
+                            a seriously indulgent sip.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <span class="food-price">
+                                ₹189
+                            </span>
+
+                            <button class="add-button" onclick="addItem(this)">
+                                Add +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+         NO RESULTS
+    ================================================== -->
+
+        <div class="no-results" id="noResults">
+
+            <div>
+                🔎
+            </div>
+
+            <h3>
+                Nothing found
+            </h3>
+
+            <p>
+                Try searching for another dish or beverage.
+            </p>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================================
+     CART OVERLAY
+===================================================== -->
+
+    <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+
+
+
+    <!-- =====================================================
+     CART DRAWER
+===================================================== -->
+
+    <aside class="cart-drawer" id="cartDrawer">
+
+        <div class="cart-header">
+
+            <h2>
+                Your Order
+            </h2>
+
+            <button class="close-cart" onclick="closeCart()">
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="cart-items" id="cartItems">
+
+            <div class="empty-cart">
+
+                <div class="empty-cart-icon">
+                    🛒
+                </div>
+
+                <h3>
+                    Your cart is empty
+                </h3>
+
+                <p>
+                    Add something delicious to get started.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="cart-footer">
+
+            <div class="bill-row">
+
+                <span>
+                    Subtotal
+                </span>
+
+                <strong id="subtotal">
+                    ₹0
+                </strong>
+
+            </div>
+
+
+            <div class="bill-row">
+
+                <span>
+                    Taxes & charges
+                </span>
+
+                <strong id="tax">
+                    ₹0
+                </strong>
+
+            </div>
+
+
+            <div class="bill-row total">
+
+                <span>
+                    Total
+                </span>
+
+                <strong id="total">
+                    ₹0
+                </strong>
+
+            </div>
+
+
+            <button class="checkout-btn" onclick="checkout()">
+                Proceed to Checkout →
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+     TOAST
+===================================================== -->
+
+    <div class="toast" id="toast">
+        Added to your cart
+    </div>
+
+
+
+    <!-- =====================================================
+     FOOTER
+===================================================== -->
+
+    <div id="siteFooter"></div>
+
+
+
+    <!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+    <script>
+
+        /* =====================================================
+           CART DATA
+        ===================================================== */
+
+        let cart = window.SutoCart ? window.SutoCart.get() : [];
+
+
+        /* =====================================================
+           ADD ITEM
+        ===================================================== */
+
+        function addItem(button) {
+
+            const card =
+                button.closest(".food-card");
+
+            const name =
+                card.dataset.name;
+
+            const price =
+                Number(card.dataset.price);
+
+            const image =
+                card.dataset.image;
+
+
+            const existing =
+                cart.find(
+                    item => item.name === name
+                );
+
+
+            if (existing) {
+
+                existing.quantity++;
+
+            } else {
+
+                cart.push({
+                    name,
+                    price,
+                    image,
+                    quantity: 1
+                });
+
+            }
+
+
+            updateCart();
+
+            showToast(
+                `${name} added to your cart`
+            );
+
+        }
+
+
+        /* =====================================================
+           UPDATE CART
+        ===================================================== */
+
+        function updateCart() {
+
+            if (window.SutoCart) window.SutoCart.save(cart);
+
+            const cartItems =
+                document.getElementById(
+                    "cartItems"
+                );
+
+
+            const count =
+                cart.reduce(
+                    (total, item) =>
+                        total + item.quantity,
+                    0
+                );
+
+
+            const countEl = document.getElementById("headerCartCount") || document.getElementById("cartCount");
+            if (countEl) countEl.textContent = count;
+
+
+            if (cart.length === 0) {
+
+                cartItems.innerHTML = `
+
+                <div class="empty-cart">
+
+                    <div class="empty-cart-icon">
+                        🛒
+                    </div>
+
+                    <h3>
+                        Your cart is empty
+                    </h3>
+
+                    <p>
+                        Add something delicious to get started.
+                    </p>
+
+                </div>
+
+            `;
+
+            } else {
+
+                cartItems.innerHTML =
+                    cart.map(
+                        (item, index) => `
+
+                    <div class="cart-item">
+
+                        <div class="cart-item-image">
+
+                            <img
+                                src="${item.image}"
+                                alt="${item.name}"
+                            >
+
+                        </div>
+
+
+                        <div class="cart-item-info">
+
+                            <h4>
+                                ${item.name}
+                            </h4>
+
+                            <div class="cart-item-price">
+                                ₹${item.price * item.quantity}
+                            </div>
+
+
+                            <div class="cart-quantity">
+
+                                <button
+                                    onclick="changeQuantity(${index}, -1)"
+                                >
+                                    −
+                                </button>
+
+                                <span>
+                                    ${item.quantity}
+                                </span>
+
+                                <button
+                                    onclick="changeQuantity(${index}, 1)"
+                                >
+                                    +
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                `
+                    ).join("");
+
+            }
+
+
+            calculateBill();
+        updateCart();
+
+        }
+
+
+        /* =====================================================
+           CHANGE QUANTITY
+        ===================================================== */
+
+        function changeQuantity(
+            index,
+            amount
+        ) {
+
+            cart[index].quantity += amount;
+
+
+            if (
+                cart[index].quantity <= 0
+            ) {
+
+                cart.splice(index, 1);
+
+            }
+
+
+            updateCart();
+
+        }
+
+
+        /* =====================================================
+           CALCULATE BILL
+        ===================================================== */
+
+        function calculateBill() {
+
+            const subtotal =
+                cart.reduce(
+                    (total, item) =>
+                        total +
+                        item.price *
+                        item.quantity,
+                    0
+                );
+
+
+            /*
+                Demo tax calculation.
+    
+                Replace this with the actual
+                GST/service charge logic later.
+            */
+
+            const tax =
+                Math.round(
+                    subtotal * 0.05
+                );
+
+
+            const total =
+                subtotal + tax;
+
+
+            document.getElementById(
+                "subtotal"
+            ).textContent =
+                `₹${subtotal}`;
+
+
+            document.getElementById(
+                "tax"
+            ).textContent =
+                `₹${tax}`;
+
+
+            document.getElementById(
+                "total"
+            ).textContent =
+                `₹${total}`;
+
+        }
+
+
+        /* =====================================================
+           OPEN CART
+        ===================================================== */
+
+        function openCart() {
+
+            document
+                .getElementById("cartDrawer")
+                .classList
+                .add("open");
+
+
+            document
+                .getElementById("cartOverlay")
+                .classList
+                .add("open");
+
+
+            document.body.style.overflow =
+                "hidden";
+
+        }
+
+
+        /* =====================================================
+           CLOSE CART
+        ===================================================== */
+
+        function closeCart() {
+
+            document
+                .getElementById("cartDrawer")
+                .classList
+                .remove("open");
+
+
+            document
+                .getElementById("cartOverlay")
+                .classList
+                .remove("open");
+
+
+            document.body.style.overflow =
+                "";
+
+        }
+
+
+        /* =====================================================
+           CHECKOUT
+        ===================================================== */
+
+        function checkout() {
+
+            if (cart.length === 0) {
+
+                showToast(
+                    "Please add an item first"
+                );
+
+                return;
+
+            }
+
+
+            /*
+                Later:
+            */
+                window.location.href =
+                    "checkout.html";
+            
+
+            // alert(
+            //     "Checkout page will be connected here."
+            // );
+
+        }
+
+
+        /* =====================================================
+           SEARCH
+        ===================================================== */
+
+        const searchInput =
+            document.getElementById(
+                "searchInput"
+            );
+
+
+        searchInput.addEventListener(
+            "input",
+            function () {
+
+                const query =
+                    this.value
+                        .toLowerCase()
+                        .trim();
+
+
+                filterMenu(
+                    query,
+                    "all"
+                );
+
+            }
+        );
+
+
+        /* =====================================================
+           CATEGORY FILTER
+        ===================================================== */
+
+        const categoryButtons =
+            document.querySelectorAll(
+                ".category-btn"
+            );
+
+
+        categoryButtons.forEach(
+            button => {
+
+                button.addEventListener(
+                    "click",
+                    function () {
+
+                        categoryButtons
+                            .forEach(
+                                btn =>
+                                    btn.classList
+                                        .remove("active")
+                            );
+
+
+                        this.classList
+                            .add("active");
+
+
+                        const target =
+                            this.dataset.target;
+
+
+                        if (
+                            target === "all"
+                        ) {
+
+                            document
+                                .querySelectorAll(
+                                    ".menu-section"
+                                )
+                                .forEach(
+                                    section =>
+                                        section.style.display =
+                                        ""
+                                );
+
+
+                            document
+                                .querySelectorAll(
+                                    ".food-card"
+                                )
+                                .forEach(
+                                    card =>
+                                        card.style.display =
+                                        ""
+                                );
+
+                            return;
+
+                        }
+
+
+                        document
+                            .querySelectorAll(
+                                ".menu-section"
+                            )
+                            .forEach(
+                                section => {
+
+                                    if (
+                                        section.dataset
+                                            .category === target
+                                    ) {
+
+                                        section.style.display =
+                                            "";
+
+                                        section
+                                            .scrollIntoView({
+                                                behavior:
+                                                    "smooth",
+                                                block:
+                                                    "start"
+                                            });
+
+                                    } else {
+
+                                        section.style.display =
+                                            "none";
+
+                                    }
+
+                                }
+                            );
+
+                    }
+                );
+
+            }
+        );
+
+
+        /* =====================================================
+           FILTER MENU
+        ===================================================== */
+
+        function filterMenu(
+            query,
+            category
+        ) {
+
+            let visibleItems = 0;
+
+
+            document
+                .querySelectorAll(
+                    ".menu-section"
+                )
+                .forEach(
+                    section => {
+
+                        let sectionVisible =
+                            false;
+
+
+                        section
+                            .querySelectorAll(
+                                ".food-card"
+                            )
+                            .forEach(
+                                card => {
+
+                                    const name =
+                                        card.dataset
+                                            .name
+                                            .toLowerCase();
+
+
+                                    const cardCategory =
+                                        card.dataset
+                                            .category;
+
+
+                                    const matchesSearch =
+                                        !query ||
+                                        name.includes(
+                                            query
+                                        );
+
+
+                                    const matchesCategory =
+                                        category ===
+                                        "all" ||
+                                        cardCategory ===
+                                        category;
+
+
+                                    if (
+                                        matchesSearch &&
+                                        matchesCategory
+                                    ) {
+
+                                        card.style.display =
+                                            "";
+
+                                        sectionVisible =
+                                            true;
+
+                                        visibleItems++;
+
+                                    } else {
+
+                                        card.style.display =
+                                            "none";
+
+                                    }
+
+                                }
+                            );
+
+
+                        section.style.display =
+                            sectionVisible
+                                ? ""
+                                : "none";
+
+                    }
+                );
+
+
+            document.getElementById(
+                "noResults"
+            ).style.display =
+                visibleItems === 0
+                    ? "block"
+                    : "none";
+
+        }
+
+
+        /* =====================================================
+           TOAST
+        ===================================================== */
+
+        let toastTimer;
+
+
+        function showToast(message) {
+
+            const toast =
+                document.getElementById(
+                    "toast"
+                );
+
+
+            toast.textContent =
+                message;
+
+
+            toast.classList
+                .add("show");
+
+
+            clearTimeout(
+                toastTimer
+            );
+
+
+            toastTimer =
+                setTimeout(
+                    () => {
+
+                        toast.classList
+                            .remove("show");
+
+                    },
+                    2200
+                );
+
+        }
+
+
+        /* =====================================================
+           KEYBOARD ESC
+        ===================================================== */
+
+        updateCart();
+
+        document.addEventListener(
+            "keydown",
+            function (event) {
+
+                if (
+                    event.key === "Escape"
+                ) {
+
+                    closeCart();
+
+                }
+
+            }
+        );
+
+    </script>
+
+
+<script src="data/menu.js"></script>
+<script src="assets/common.js"></script>
+</body>
+
+</html>

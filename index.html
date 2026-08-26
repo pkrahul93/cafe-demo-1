@@ -1,0 +1,1804 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Suto Cafe | Preet Vihar</title>
+
+    <meta name="description" content="Suto Cafe Preet Vihar — Coffee, food, desserts and good moments.">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: #faf8f4;
+            color: #1c1713;
+            overflow-x: hidden;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        button,
+        a {
+            font-family: inherit;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+
+        /* =====================================================
+           VARIABLES
+        ===================================================== */
+
+        :root {
+            --dark: #17120f;
+            --dark-soft: #251b16;
+            --cream: #faf8f4;
+            --cream-dark: #f1ece4;
+            --brown: #704b32;
+            --brown-light: #a47756;
+            --gold: #c99b63;
+            --white: #ffffff;
+            --text-muted: #756c65;
+            --border: rgba(28, 23, 19, 0.10);
+            --radius: 24px;
+        }
+
+
+        /* =====================================================
+           NAVBAR
+        ===================================================== */
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 78px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 6%;
+
+            background: rgba(250, 248, 244, 0.92);
+            backdrop-filter: blur(16px);
+
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-mark {
+            width: 38px;
+            height: 38px;
+
+            border-radius: 50%;
+
+            background: var(--dark);
+
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-family: "Playfair Display", serif;
+            font-weight: 700;
+            font-size: 19px;
+        }
+
+        .logo-text {
+            font-family: "Playfair Display", serif;
+            font-size: 25px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 600;
+            color: #3f3731;
+            transition: 0.25s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--brown);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-call {
+            width: 42px;
+            height: 42px;
+
+            border: 1px solid var(--border);
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 17px;
+
+            transition: 0.25s ease;
+        }
+
+        .nav-call:hover {
+            background: var(--dark);
+            color: white;
+        }
+
+        .order-btn {
+            border: none;
+            background: var(--dark);
+            color: white;
+
+            padding: 13px 20px;
+            border-radius: 999px;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition: 0.25s ease;
+        }
+
+        .order-btn:hover {
+            transform: translateY(-2px);
+            background: var(--brown);
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+            min-height: 100vh;
+
+            padding: 120px 6% 60px;
+
+            display: grid;
+            grid-template-columns: 0.95fr 1.05fr;
+
+            align-items: center;
+
+            gap: 60px;
+        }
+
+        .hero-content {
+            max-width: 620px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+            padding: 8px 14px;
+
+            background: #eee5da;
+            color: var(--brown);
+
+            border-radius: 999px;
+
+            font-size: 12px;
+            font-weight: 700;
+
+            margin-bottom: 24px;
+        }
+
+        .eyebrow-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #4b9c65;
+        }
+
+        .hero h1 {
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(52px, 6vw, 86px);
+
+            line-height: 0.98;
+
+            letter-spacing: -3px;
+
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: var(--brown-light);
+            font-style: italic;
+        }
+
+        .hero-description {
+            max-width: 520px;
+
+            color: var(--text-muted);
+
+            font-size: 17px;
+            line-height: 1.7;
+
+            margin-bottom: 32px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .primary-btn {
+            padding: 15px 24px;
+
+            background: var(--dark);
+            color: white;
+
+            border-radius: 999px;
+
+            font-weight: 700;
+            font-size: 14px;
+
+            border: none;
+            cursor: pointer;
+
+            transition: 0.25s ease;
+        }
+
+        .primary-btn:hover {
+            background: var(--brown);
+            transform: translateY(-2px);
+        }
+
+        .secondary-btn {
+            padding: 15px 24px;
+
+            background: transparent;
+            color: var(--dark);
+
+            border: 1px solid var(--border);
+
+            border-radius: 999px;
+
+            font-weight: 700;
+            font-size: 14px;
+
+            cursor: pointer;
+
+            transition: 0.25s ease;
+        }
+
+        .secondary-btn:hover {
+            background: var(--cream-dark);
+        }
+
+        .hero-info {
+            display: flex;
+            gap: 28px;
+
+            margin-top: 38px;
+            padding-top: 25px;
+
+            border-top: 1px solid var(--border);
+        }
+
+        .hero-stat strong {
+            display: block;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 25px;
+        }
+
+        .hero-stat span {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+
+        /* HERO IMAGE */
+
+        .hero-visual {
+            position: relative;
+            height: 680px;
+        }
+
+        .hero-image {
+            height: 100%;
+
+            border-radius: 36px;
+
+            overflow: hidden;
+
+            position: relative;
+        }
+
+        .hero-image::after {
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            background:
+                linear-gradient(180deg,
+                    transparent 50%,
+                    rgba(0, 0, 0, 0.55));
+        }
+
+        .hero-image img {
+            height: 100%;
+            transition: transform 0.7s ease;
+        }
+
+        .hero-visual:hover img {
+            transform: scale(1.04);
+        }
+
+        .hero-card {
+            position: absolute;
+
+            left: -32px;
+            bottom: 34px;
+
+            width: 230px;
+
+            padding: 18px;
+
+            background: rgba(255, 255, 255, 0.94);
+
+            backdrop-filter: blur(15px);
+
+            border-radius: 20px;
+
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .hero-card small {
+            color: var(--text-muted);
+            font-size: 11px;
+        }
+
+        .hero-card h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 23px;
+            margin: 5px 0;
+        }
+
+        .hero-card p {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+
+        /* =====================================================
+           OFFER BAR
+        ===================================================== */
+
+        .offer-strip {
+            background: var(--dark);
+            color: white;
+
+            padding: 17px 6%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 15px;
+
+            text-align: center;
+
+            font-size: 13px;
+        }
+
+        .offer-strip strong {
+            color: #e6bf8e;
+        }
+
+        .offer-link {
+            border-bottom: 1px solid #e6bf8e;
+            color: #e6bf8e;
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           SECTION COMMON
+        ===================================================== */
+
+        section {
+            padding: 100px 6%;
+        }
+
+        .section-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+
+            margin-bottom: 45px;
+        }
+
+        .section-label {
+            color: var(--brown);
+            font-size: 12px;
+            font-weight: 800;
+
+            text-transform: uppercase;
+            letter-spacing: 2px;
+
+            margin-bottom: 10px;
+        }
+
+        .section-heading h2 {
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(36px, 4vw, 54px);
+
+            line-height: 1;
+
+            letter-spacing: -1.5px;
+        }
+
+        .section-heading p {
+            max-width: 400px;
+
+            color: var(--text-muted);
+
+            line-height: 1.7;
+
+            font-size: 14px;
+        }
+
+        .view-menu {
+            color: var(--brown);
+
+            font-size: 13px;
+            font-weight: 800;
+
+            border-bottom: 1px solid var(--brown);
+
+            padding-bottom: 4px;
+        }
+
+
+        /* =====================================================
+           CATEGORIES
+        ===================================================== */
+
+        .categories {
+            background: white;
+        }
+
+        .category-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(5, 1fr);
+
+            gap: 18px;
+        }
+
+        .category {
+            height: 220px;
+
+            border-radius: 24px;
+
+            overflow: hidden;
+
+            position: relative;
+
+            cursor: pointer;
+        }
+
+        .category img {
+            height: 100%;
+
+            transition: transform 0.5s ease;
+        }
+
+        .category:hover img {
+            transform: scale(1.08);
+        }
+
+        .category::after {
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            background:
+                linear-gradient(transparent 30%,
+                    rgba(0, 0, 0, 0.75));
+        }
+
+        .category-name {
+            position: absolute;
+
+            bottom: 20px;
+            left: 20px;
+
+            z-index: 2;
+
+            color: white;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 24px;
+        }
+
+
+        /* =====================================================
+           POPULAR ITEMS
+        ===================================================== */
+
+        .popular-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+        .food-card {
+            background: white;
+
+            border-radius: 24px;
+
+            overflow: hidden;
+
+            border: 1px solid var(--border);
+
+            transition: 0.3s ease;
+        }
+
+        .food-card:hover {
+            transform: translateY(-7px);
+
+            box-shadow:
+                0 20px 45px rgba(0, 0, 0, 0.08);
+        }
+
+        .food-image {
+            height: 235px;
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        .food-image img {
+            height: 100%;
+
+            transition: transform 0.5s ease;
+        }
+
+        .food-card:hover .food-image img {
+            transform: scale(1.06);
+        }
+
+        .food-tag {
+            position: absolute;
+
+            top: 15px;
+            left: 15px;
+
+            z-index: 2;
+
+            padding: 7px 10px;
+
+            background: white;
+
+            border-radius: 999px;
+
+            font-size: 10px;
+            font-weight: 800;
+
+            color: var(--brown);
+        }
+
+        .food-info {
+            padding: 20px;
+        }
+
+        .food-info h3 {
+            font-family: "Playfair Display", serif;
+
+            font-size: 22px;
+
+            margin-bottom: 7px;
+        }
+
+        .food-info p {
+            color: var(--text-muted);
+
+            font-size: 12px;
+            line-height: 1.5;
+
+            margin-bottom: 16px;
+        }
+
+        .food-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price {
+            font-weight: 800;
+            font-size: 17px;
+        }
+
+        .add-btn {
+            width: 38px;
+            height: 38px;
+
+            border-radius: 50%;
+
+            border: 1px solid var(--border);
+
+            background: transparent;
+
+            cursor: pointer;
+
+            font-size: 20px;
+
+            transition: 0.25s ease;
+        }
+
+        .add-btn:hover {
+            background: var(--dark);
+            color: white;
+        }
+
+
+        /* =====================================================
+           EXPERIENCE
+        ===================================================== */
+
+        .experience {
+            background: var(--dark);
+            color: white;
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+        .experience-image {
+            height: 560px;
+
+            border-radius: 30px;
+
+            overflow: hidden;
+        }
+
+        .experience-image img {
+            height: 100%;
+        }
+
+        .experience-content .section-label {
+            color: #d5a873;
+        }
+
+        .experience-content h2 {
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(40px, 5vw, 65px);
+
+            line-height: 1.02;
+
+            letter-spacing: -2px;
+
+            margin-bottom: 25px;
+        }
+
+        .experience-content p {
+            color: #bcb4ae;
+
+            line-height: 1.8;
+
+            font-size: 15px;
+
+            max-width: 500px;
+
+            margin-bottom: 28px;
+        }
+
+        .feature-list {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 22px;
+
+            margin-top: 30px;
+        }
+
+        .feature {
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+            padding-top: 15px;
+        }
+
+        .feature strong {
+            display: block;
+
+            margin-bottom: 5px;
+
+            font-size: 14px;
+        }
+
+        .feature span {
+            font-size: 12px;
+
+            color: #aaa19b;
+        }
+
+
+        /* =====================================================
+           CTA
+        ===================================================== */
+
+        .cta {
+            padding: 90px 6%;
+
+            background: #eee6dc;
+
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(40px, 5vw, 65px);
+
+            max-width: 760px;
+
+            margin: 0 auto 18px;
+
+            line-height: 1.05;
+        }
+
+        .cta p {
+            color: var(--text-muted);
+
+            max-width: 550px;
+
+            margin: 0 auto 30px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            background: #111;
+
+            color: white;
+
+            padding: 65px 6% 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+
+            grid-template-columns:
+                1.4fr 1fr 1fr 1fr;
+
+            gap: 50px;
+
+            padding-bottom: 50px;
+        }
+
+        .footer-logo {
+            font-family: "Playfair Display", serif;
+
+            font-size: 30px;
+
+            margin-bottom: 15px;
+        }
+
+        .footer-about {
+            color: #aaa;
+
+            max-width: 300px;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+        }
+
+        footer h4 {
+            font-size: 13px;
+
+            margin-bottom: 18px;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            margin-bottom: 10px;
+
+            color: #999;
+
+            font-size: 13px;
+        }
+
+        footer li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+            padding-top: 22px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            color: #777;
+
+            font-size: 11px;
+        }
+
+
+        /* =====================================================
+           FLOATING ORDER BUTTON
+        ===================================================== */
+
+        .floating-order {
+            position: fixed;
+
+            right: 22px;
+            bottom: 22px;
+
+            z-index: 999;
+
+            background: var(--dark);
+
+            color: white;
+
+            padding: 14px 21px;
+
+            border-radius: 999px;
+
+            box-shadow:
+                0 15px 40px rgba(0, 0, 0, 0.25);
+
+            font-size: 13px;
+
+            font-weight: 800;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 1050px) {
+
+            .nav-links {
+                gap: 18px;
+            }
+
+            .hero {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .hero-visual {
+                height: 580px;
+            }
+
+            .category-grid {
+                grid-template-columns:
+                    repeat(3, 1fr);
+            }
+
+            .popular-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+        }
+
+
+        @media (max-width: 800px) {
+
+            .navbar {
+                height: 70px;
+            }
+
+            .nav-links,
+            .nav-actions .order-btn {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .hero {
+                padding-top: 110px;
+
+                grid-template-columns: 1fr;
+
+                gap: 40px;
+            }
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .hero-visual {
+                height: 500px;
+            }
+
+            .hero-card {
+                left: 15px;
+            }
+
+            .category-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .experience {
+                grid-template-columns: 1fr;
+
+                gap: 40px;
+            }
+
+            .experience-image {
+                height: 430px;
+            }
+
+            .footer-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+        }
+
+
+        @media (max-width: 520px) {
+
+            section {
+                padding: 70px 5%;
+            }
+
+            .hero {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+
+            .hero-visual {
+                height: 420px;
+            }
+
+            .hero-info {
+                gap: 15px;
+            }
+
+            .category-grid,
+            .popular-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .category {
+                height: 190px;
+            }
+
+            .section-heading {
+                display: block;
+            }
+
+            .section-heading p {
+                margin-top: 15px;
+            }
+
+            .view-menu {
+                display: inline-block;
+                margin-top: 20px;
+            }
+
+            .feature-list {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .offer-strip {
+                font-size: 11px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="assets/common.css">
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+    <div id="siteHeader"></div>
+
+
+
+    <!-- =====================================================
+     HERO
+===================================================== -->
+
+    <main id="home">
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="eyebrow">
+
+                    <span class="eyebrow-dot"></span>
+
+                    Open today · 11 AM – 11 PM
+
+                </div>
+
+
+                <h1>
+
+                    Good food.
+                    <br>
+
+                    Great <span>coffee.</span>
+                    <br>
+
+                    Better moments.
+
+                </h1>
+
+
+                <p class="hero-description">
+
+                    Welcome to Suto Cafe Preet Vihar — your neighbourhood
+                    destination for comforting food, handcrafted beverages,
+                    desserts and conversations that last a little longer.
+
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <button class="primary-btn" onclick="goToMenu()">
+                        Explore Menu →
+                    </button>
+
+
+                    <button class="secondary-btn" onclick="bookTable()">
+                        Book a Table
+                    </button>
+
+                </div>
+
+
+                <div class="hero-info">
+
+                    <div class="hero-stat">
+
+                        <strong>4.6★</strong>
+
+                        <span>Google rating</span>
+
+                    </div>
+
+
+                    <div class="hero-stat">
+
+                        <strong>100+</strong>
+
+                        <span>Happy reviews</span>
+
+                    </div>
+
+
+                    <div class="hero-stat">
+
+                        <strong>100%</strong>
+
+                        <span>Vegetarian</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="hero-visual">
+
+                <div class="hero-image">
+
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=85"
+                        alt="Suto Cafe interior">
+
+                </div>
+
+
+                <div class="hero-card">
+
+                    <small>Today's mood</small>
+
+                    <h3>Slow mornings.</h3>
+
+                    <p>
+                        Coffee, comfort food & conversations.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+     OFFER STRIP
+===================================================== -->
+
+        <div class="offer-strip" id="offers">
+
+            <span>🎁</span>
+
+            <strong>Special Offer</strong>
+
+            <span>
+                Book your table and discover exciting dining offers.
+            </span>
+
+            <a href="offers.html" class="offer-link" onclick="showOffer(event)">
+                View Offers →
+            </a>
+
+        </div>
+
+
+
+        <!-- =====================================================
+     CATEGORIES
+===================================================== -->
+
+        <section class="categories" id="menu">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <div class="section-label">
+                        Explore
+                    </div>
+
+                    <h2>
+                        Something for<br>
+                        every craving.
+                    </h2>
+
+                </div>
+
+
+                <div>
+
+                    <p>
+                        From creamy coffee and refreshing beverages
+                        to pizzas, burgers, pasta and indulgent desserts.
+                    </p>
+
+                    <br>
+
+                    <a href="menu.html" class="view-menu">
+                        View Full Menu →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="category-grid">
+
+
+                <a href="menu.html#coffee" class="category">
+
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=700&q=80"
+                        alt="Coffee">
+
+                    <div class="category-name">
+                        Coffee
+                    </div>
+
+                </a>
+
+
+                <a href="menu.html#pizza" class="category">
+
+                    <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=700&q=80"
+                        alt="Pizza">
+
+                    <div class="category-name">
+                        Pizza
+                    </div>
+
+                </a>
+
+
+                <a href="menu.html#burgers" class="category">
+
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=80"
+                        alt="Burger">
+
+                    <div class="category-name">
+                        Burgers
+                    </div>
+
+                </a>
+
+
+                <a href="menu.html#desserts" class="category">
+
+                    <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=700&q=80"
+                        alt="Desserts">
+
+                    <div class="category-name">
+                        Desserts
+                    </div>
+
+                </a>
+
+
+                <a href="menu.html#beverages" class="category">
+
+                    <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=700&q=80"
+                        alt="Beverages">
+
+                    <div class="category-name">
+                        Beverages
+                    </div>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+     POPULAR
+===================================================== -->
+
+        <section>
+
+            <div class="section-heading">
+
+                <div>
+
+                    <div class="section-label">
+                        Customer favourites
+                    </div>
+
+                    <h2>
+                        Worth ordering.
+                    </h2>
+
+                </div>
+
+
+                <a href="menu.html" class="view-menu">
+                    See All Items →
+                </a>
+
+            </div>
+
+
+
+            <div class="popular-grid">
+
+
+                <!-- ITEM 1 -->
+
+                <article class="food-card">
+
+                    <div class="food-image">
+
+                        <span class="food-tag">
+                            Bestseller
+                        </span>
+
+                        <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=700&q=80"
+                            alt="Veggie Pizza">
+
+                    </div>
+
+
+                    <div class="food-info">
+
+                        <h3>
+                            Fresh Veggie Pizza
+                        </h3>
+
+                        <p>
+                            A loaded vegetarian pizza with fresh
+                            vegetables and rich cheesy goodness.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <span class="price">
+                                ₹249
+                            </span>
+
+                            <button class="add-btn" onclick="addToCart('Farmhouse Pizza')">
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- ITEM 2 -->
+
+                <article class="food-card">
+
+                    <div class="food-image">
+
+                        <span class="food-tag">
+                            Popular
+                        </span>
+
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=80"
+                            alt="Veg Burger">
+
+                    </div>
+
+
+                    <div class="food-info">
+
+                        <h3>
+                            Veggie Delight Burger
+                        </h3>
+
+                        <p>
+                            Crispy, juicy and packed with delicious
+                            vegetarian flavours.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <span class="price">
+                                ₹179
+                            </span>
+
+                            <button class="add-btn" onclick="addToCart('Classic Veg Burger')">
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- ITEM 3 -->
+
+                <article class="food-card">
+
+                    <div class="food-image">
+
+                        <span class="food-tag">
+                            Must Try
+                        </span>
+
+                        <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=700&q=80"
+                            alt="Coffee">
+
+                    </div>
+
+
+                    <div class="food-info">
+
+                        <h3>
+                            Classic Cappuccino
+                        </h3>
+
+                        <p>
+                            Smooth espresso, steamed milk and
+                            a beautiful layer of foam.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <span class="price">
+                                ₹129
+                            </span>
+
+                            <button class="add-btn" onclick="addToCart('Cappuccino')">
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- ITEM 4 -->
+
+                <article class="food-card">
+
+                    <div class="food-image">
+
+                        <span class="food-tag">
+                            Sweet
+                        </span>
+
+                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=700&q=80"
+                            alt="Dessert">
+
+                    </div>
+
+
+                    <div class="food-info">
+
+                        <h3>
+                            Chocolate Dessert
+                        </h3>
+
+                        <p>
+                            A rich chocolate treat for finishing
+                            your café experience on a sweet note.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <span class="price">
+                                ₹199
+                            </span>
+
+                            <button class="add-btn" onclick="addToCart('Chocolate Brownie')">
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+     EXPERIENCE
+===================================================== -->
+
+        <section class="experience" id="experience">
+
+            <div class="experience-image">
+
+                <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1000&q=85"
+                    alt="Cafe experience">
+
+            </div>
+
+
+            <div class="experience-content">
+
+                <div class="section-label">
+                    The Suto Experience
+                </div>
+
+
+                <h2>
+                    Come for the
+                    coffee. Stay for
+                    the vibe.
+                </h2>
+
+
+                <p>
+
+                    Suto Cafe is designed to be more than just
+                    a place to eat. Whether you're catching up
+                    with friends, taking a work break or enjoying
+                    some quiet time, there's always a seat waiting
+                    for you.
+
+                </p>
+
+
+                <div class="feature-list">
+
+
+                    <div class="feature">
+
+                        <strong>
+                            ☕ Crafted beverages
+                        </strong>
+
+                        <span>
+                            Coffee, shakes, mocktails & more.
+                        </span>
+
+                    </div>
+
+
+                    <div class="feature">
+
+                        <strong>
+                            🍕 Comfort food
+                        </strong>
+
+                        <span>
+                            Pizza, pasta, burgers & snacks.
+                        </span>
+
+                    </div>
+
+
+                    <div class="feature">
+
+                        <strong>
+                            🌿 Vegetarian
+                        </strong>
+
+                        <span>
+                            A wide range of vegetarian choices.
+                        </span>
+
+                    </div>
+
+
+                    <div class="feature">
+
+                        <strong>
+                            📍 Preet Vihar
+                        </strong>
+
+                        <span>
+                            Your neighbourhood café.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+     CTA
+===================================================== -->
+
+        <section class="cta">
+
+            <div class="section-label">
+                Your table is waiting
+            </div>
+
+
+            <h2>
+                Make today a
+                little more delicious.
+            </h2>
+
+
+            <p>
+                Visit Suto Cafe Preet Vihar for coffee,
+                food, desserts and good conversations.
+            </p>
+
+
+            <button class="primary-btn" onclick="bookTable()">
+                Book a Table →
+            </button>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+     FOOTER
+===================================================== -->
+
+    <div id="siteFooter"></div>
+
+
+
+    <!-- =====================================================
+     FLOATING ORDER
+===================================================== -->
+
+    <a href="menu.html" class="floating-order">
+        🛒 Order Online
+    </a>
+
+
+
+    <!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+    <script>
+
+        function goToMenu() {
+
+            window.location.href = "menu.html";
+
+        }
+
+
+        function bookTable() {
+
+            // alert(
+            //     "Table booking page will be connected here."
+            // );
+
+            // Later:
+            window.location.href = "contact.html";
+
+        }
+
+
+        function addToCart(item) {
+            const menu = window.SUTO_MENU_ITEMS || [];
+            const product = menu.find(x => x.name.toLowerCase() === String(item).toLowerCase()) ||
+                            menu.find(x => x.name.toLowerCase().includes(String(item).toLowerCase().split(" ")[0]));
+            if (!product) { showToast(item + " is available from our menu."); return; }
+            const cart = window.SutoCart ? SutoCart.get() : [];
+            const existing = cart.find(x => x.productId === product.id && !x.options);
+            if (existing) existing.quantity = (Number(existing.quantity) || 0) + 1;
+            else cart.push({ id: Date.now(), productId: product.id, name: product.name, price: product.price, quantity: 1, image: product.image, options: {}, instructions: "" });
+            if (window.SutoCart) SutoCart.save(cart);
+            showToast(product.name + " added to cart");
+        }
+
+
+        function showOffer(event) {
+            event.preventDefault();
+            window.location.href = "offers.html";
+        }
+
+
+        function toggleMobileMenu() {
+
+            const nav =
+                document.querySelector(".nav-links");
+
+            if (nav.style.display === "flex") {
+
+                nav.style.display = "none";
+
+            } else {
+
+                nav.style.display = "flex";
+
+                nav.style.position = "absolute";
+                nav.style.top = "70px";
+                nav.style.left = "0";
+                nav.style.right = "0";
+
+                nav.style.background = "#faf8f4";
+
+                nav.style.padding = "25px";
+
+                nav.style.flexDirection = "column";
+
+                nav.style.borderBottom =
+                    "1px solid rgba(0,0,0,.08)";
+
+            }
+
+        }
+
+    </script>
+
+<script src="data/menu.js"></script>
+<script src="assets/common.js"></script>
+</body>
+
+</html>
