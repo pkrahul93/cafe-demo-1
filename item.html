@@ -7,9 +7,9 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Margherita Pizza | Suto Cafe</title>
+    <title>Margherita Pizza | Delhi 2D Cafe</title>
 
-    <meta name="description" content="Order Margherita Pizza from Suto Cafe Preet Vihar.">
+    <meta name="description" content="Order Margherita Pizza from Delhi 2D Cafe New Aruna Nagar.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -2414,7 +2414,7 @@
 
                         <span></span>
 
-                        Suto Cafe Favourite
+                        Delhi 2D Cafe Favourite
 
                     </div>
 
@@ -2879,7 +2879,7 @@
 
                         Pair it with a cold coffee, mocktail
                         or one of our refreshing beverages
-                        for the complete Suto Cafe experience.
+                        for the complete Delhi 2D Cafe experience.
 
                     </p>
 
@@ -3544,11 +3544,11 @@
                     const descEl = document.getElementById("productDescription");
                     const mainImage = document.getElementById("mainProductImage");
                     if (nameEl) nameEl.textContent = product.name;
-                    if (descEl) descEl.textContent = product.description || "Made fresh at Suto Cafe with carefully selected ingredients.";
+                    if (descEl) descEl.textContent = product.description || "Made fresh at Delhi 2D Cafe with carefully selected ingredients.";
                     if (mainImage) { mainImage.src = product.image; mainImage.alt = product.name; }
                     document.querySelectorAll(".thumbnail img").forEach(img => { img.src = product.image; img.alt = product.name; });
                     document.querySelectorAll(".thumbnail").forEach(btn => btn.setAttribute("onclick", `changeImage(this, '${product.image}')`));
-                    document.title = `${product.name} | Suto Cafe`;
+                    document.title = `${product.name} | Delhi 2D Cafe`;
                     if (product.category !== "pizza") {
                         document.querySelectorAll(".option-group").forEach(group => group.style.display = "none");
                     }

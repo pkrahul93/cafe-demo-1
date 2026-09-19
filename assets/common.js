@@ -59,8 +59,8 @@
     if(headerHost){
       headerHost.innerHTML = `
         <header class="site-header">
-          <a href="index.html" class="site-logo" aria-label="Suto Cafe home">
-            <span class="site-logo-mark">S</span><span class="site-logo-name">Suto Cafe</span>
+          <a href="index.html" class="site-logo" aria-label="Delhi 2D Cafe home">
+            <span class="site-logo-mark">2D</span><span class="site-logo-name">Delhi 2D Cafe</span>
           </a>
           <nav class="site-nav" aria-label="Primary navigation">
             <a class="${active("index.html")}" href="index.html">Home</a>
@@ -70,7 +70,7 @@
             <a class="${active("contact.html")}" href="contact.html">Contact</a>
           </nav>
           <div class="site-actions">
-            <a class="site-call" href="tel:+919126501137" aria-label="Call Suto Cafe">☎ <span>Call</span></a>
+            <a class="site-call" href="tel:+919126501137" aria-label="Call Delhi 2D Cafe">☎ <span>Call</span></a>
             <button class="site-cart" type="button" onclick="openSiteCart()" aria-label="Open cart">🛒 <span>Cart</span> <b class="site-cart-count" data-site-cart-count>0</b></button>
             <button class="site-menu-toggle" type="button" onclick="toggleSiteNav()" aria-label="Open menu">☰</button>
           </div>
@@ -90,8 +90,8 @@
         <footer class="site-footer">
           <div class="site-footer-grid">
             <div>
-              <div class="site-footer-brand">Suto Cafe</div>
-              <p>Your neighbourhood café for coffee, food, desserts and good moments in Preet Vihar.</p>
+              <div class="site-footer-brand">Delhi 2D Cafe</div>
+              <p>Your neighbourhood café for coffee, food, desserts and good moments in Delhi.</p>
             </div>
             <div>
               <h4>Explore</h4>
@@ -103,19 +103,19 @@
             <div>
               <h4>Visit</h4>
               <ul>
-                <li>Shop No. 12 & 14</li><li>New Rajdhani Enclave</li><li>Swasthya Vihar</li><li>New Delhi – 110092</li>
+                <li>House number 7,</li><li>New Aruna Colony,</li><li>Majnu-ka-tilla,</li><li>New Aruna Nagar, Delhi - 110054</li>
               </ul>
             </div>
             <div>
               <h4>Contact</h4>
               <ul>
-                <li><a href="tel:+919126501137">+91 91265 01137</a></li>
-                <li><a href="https://www.google.com/maps/search/?api=1&query=Suto%20Cafe%20Preet%20Vihar%20New%20Delhi%20110092" target="_blank" rel="noopener">Get Directions</a></li>
-                <li>11 AM – 11 PM</li><li>Vegetarian Café</li>
+                <li><a href="tel:+919910757750">+91 99107 57750</a></li>
+                <li><a href="https://www.google.com/maps/search/?api=1&query=Delhi%202D%20Cafe,%20House%20number%207,%20New%20Aruna%20Colony,%20Majnu-ka-tilla,%20New%20Aruna%20Nagar,%20Delhi,%20110054" target="_blank" rel="noopener">Get Directions</a></li>
+                <li>9 AM – 11 PM</li><li>Your Cafe</li>
               </ul>
             </div>
           </div>
-          <div class="site-footer-bottom"><span>© 2026 Suto Cafe. All rights reserved.</span><span>Preet Vihar · New Delhi</span></div>
+          <div class="site-footer-bottom"><span>© 2026 Delhi 2D Cafe. All rights reserved.</span><span>Designed & Developed By NexCodeForge</span></div>
         </footer>`;
     }
 
@@ -215,7 +215,7 @@
         <article class="sc-pick">
           <img src="${i.image}" alt="${i.name}" loading="lazy">
           <div class="sc-pick-body">
-            <h3>${i.name}</h3><p>${i.description||"Made fresh at Suto Cafe."}</p>
+            <h3>${i.name}</h3><p>${i.description||"Made fresh at Delhi 2D Cafe."}</p>
             <div class="sc-pick-meta"><strong>₹${i.price}</strong><button type="button" data-add="${i.id}">Add +</button></div>
           </div>
         </article>`).join("")}</div>`;
